@@ -24,14 +24,20 @@
         </nav>
     </header>
     <div id="container">
-        <div id="tab-content">
-            Content
+        <div class="tab-content">
+            <div id="map">
+                MapView
+            </div>
+            <div id="list">
+                ListView
+            </div>
         </div>
     </div>
-    <footer class="footer-align text-left">
-        <ul id="menu">
-            <li id="map-tab-button" class="tab-button active" data-tab="#map-tab">Footer</li>
-        </ul>
+    <footer class="footer-align">
+        <div class="row ">
+            <div class="col-xs-4 col-xs-offset-1"><button class="btn btn-primary col-xs-8" onclick="app.mapView()">Map</button></div>
+            <div class="col-xs-4 col-xs-offset-3"><button class="btn btn-primary col-xs-8" onclick="app.listView()">List</button></div>
+        </div>
     </footer>
     <script type="text/javascript" src="js/index.js"></script>
 </body>

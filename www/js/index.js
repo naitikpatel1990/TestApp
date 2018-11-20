@@ -28,6 +28,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+
     },
 
     // Update DOM on a Received Event
@@ -40,7 +41,28 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+    mapView: function() {
+        var list = document.getElementById("list");
+        list.style.display = "none";
+        var map = document.getElementById("map");
+        map.style.display = "block";
+    },
+
+    listView: function() {
+        var map = document.getElementById("map");
+        map.style.display = "none";
+        var list = document.getElementById("list");
+        list.style.display = "block";
     }
+
+
 };
 
+window.onload = function() {
+    let list = document.getElementById("list");
+    list ? list.style.display = "none" : '';
+    let map = document.getElementById("map");
+    map ? map.style.display = "block" : '';
+}
 app.initialize();
