@@ -5,9 +5,19 @@
     background-color: white;
 }
 
+#map {
+    height: 75%;
+}
+
+#list {
+    height: 75%;
+}
+
 html,
 body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 #container {
@@ -45,7 +55,7 @@ footer ul#menu>li.tab-button {
     text-align: center;
     cursor: pointer;
     background: #fff;
-        font-weight: bold;
+    font-weight: bold;
     cursor: default;
     border: 1px solid rgb(101, 105, 95);
     height: 100%;

@@ -18,6 +18,7 @@
  */
 var app = {
     // Application Constructor
+    map: '',
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
@@ -54,8 +55,13 @@ var app = {
         map.style.display = "none";
         var list = document.getElementById("list");
         list.style.display = "block";
+    },
+    initMap: function() {
+        this.map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: -34.397, lng: 150.644 },
+            zoom: 8
+        });
     }
-
 
 };
 
