@@ -1,23 +1,23 @@
+/* import fonts */
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
-.ui-page {
-    background-color: white;
-}
-
+/* Map id for mapview */
 #map {
-    height: 75%;
+    height: 77%;
 }
 
+/* List id for listview */
 #list {
-    height: 75%;
+    height: 77%;
 }
 
 #list h4 {
     text-align: center;
-    margin-top: 3vw;
+    margin-top: 0;
+    padding-top: 1vh;
     font-weight: bold;
-    margin-bottom: 2.5vw;
+    margin-bottom: 2.5vh;
 }
 
 html,
@@ -25,21 +25,10 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
-#container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    top: 0px;
-    bottom: 0px;
-    left: 0;
-    /* right: 0; */
-    height: 74.5vh;
-}
-
+/* Footer css properties */
 footer ul#menu {
     list-style: none;
     display: l;
@@ -79,28 +68,6 @@ footer ul#menu>li.tab-button.active {
     align-items: center;
 }
 
-
-.tab-content {
-    text-align: center;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0 0 0 1vw;
-}
-
-footer.foot-align {}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-
-body .ui-page {
-    padding-top: 10px;
-    padding-bottom: 35px;
-}
-
 footer {
     bottom: 0px;
     width: 100%;
@@ -118,6 +85,7 @@ footer.footer-align {
     border: 2px solid rgb(101, 105, 95);
 }
 
+/* Header css properties */
 header nav.nav-align {
     border: 2px solid rgb(101, 105, 95);
     border-radius: 0px;
@@ -128,6 +96,7 @@ header nav.nav-align {
     height: 100px;
 }
 
+/* Navbar css properties */
 .navbar-brand-centered {
     position: absolute;
     left: 50%;
@@ -157,3 +126,4 @@ header nav.nav-align {
     align-items: center;
 
 }
+/* EOF CSS */
