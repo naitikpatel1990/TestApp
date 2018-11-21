@@ -44,25 +44,50 @@ var app = {
         console.log('Received Event: ' + id);
     },
     mapView: function() {
-        var list = document.getElementById("list");
+        let list = document.getElementById("list");
         list.style.display = "none";
-        var map = document.getElementById("map");
+        let map = document.getElementById("map");
         map.style.display = "block";
     },
 
     listView: function() {
-        var map = document.getElementById("map");
+        let map = document.getElementById("map");
         map.style.display = "none";
-        var list = document.getElementById("list");
+        let list = document.getElementById("list");
         list.style.display = "block";
     },
     initMap: function() {
         this.map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: -34.397, lng: 150.644 },
-            zoom: 8
+            center: { lat: 38.294958, lng: -92.492359 },
+            zoom: 4
         });
+        this.loadMarkers(this.map);
     },
-    locationArr:[]
+    locationArr: [],
+    loadMarkers: function(map) {
+        self = this;
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(res) {
+            if (this.readyState == 4 && this.status == 200) {
+                self.locationArr = JSON.parse(res.target.responseText).locations;
+                const locations = self.locationArr;
+
+                locations.forEach(function(location) {
+                    let marked = {
+                        lat: parseFloat(parseFloat(location.latitude).toFixed(6)),
+                        lng: parseFloat(parseFloat(location.longitude).toFixed(6)),
+                    };
+                    let marker = new google.maps.Marker({
+                        position: marked,
+                        map: self.map,
+                        title: location.name
+                    });
+                });
+            }
+        };
+        xhttp.open("GET", "https://my-json-server.typicode.com/naitikpatel1990/TestApp/db", true);
+        xhttp.send();
+    }
 
 };
 
