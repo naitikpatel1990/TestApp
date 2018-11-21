@@ -1,0 +1,56 @@
+{
+    "locations": [
+
+        {
+            "name": "Fargo, ND",
+            "latitude": "46.877186",
+            "longitude": "-96.789803"
+        },
+        {
+            "name": "Odessa,TX",
+            "latitude": "31.845682",
+            "longitude": "-102.367645"
+        },
+        {
+            "name": Orageberg, SC ",
+            "latitude": "33.493317",
+            "longitude": "-102.367645"
+        },
+        {
+            "name": "McAllen, TX",
+            "latitude": "26.203407",
+            "longitude": "-98.230011"
+        },
+        {
+            "name": "Springfield ,OH",
+            "latitude": "39.925751",
+            "longitude": "-83.806694"
+        },
+        {
+            "name": "Pasadena, TX",
+            "latitude": "29.691063",
+            "longitude": "-95.209099"
+        },
+        {
+            "name": "Lake Worth, FL",
+            "latitude": "26.616756",
+            "longitude": "-80.068451"
+        },
+        {
+            "name": "Novi, MI",
+            "latitude": "42.480591",
+            "longitude": "-83.475494"
+        },
+        {
+            "name": "Rochester, MN",
+            "latitude": "44.016369",
+            "longitude": "-92.475395"
+        },
+        {
+            "name": "London, KY",
+            "latitude": "37.129986",
+            "longitude": "-84.084122"
+        },
+
+    ]
+}
