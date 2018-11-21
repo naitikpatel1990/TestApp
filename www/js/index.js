@@ -72,7 +72,8 @@ var app = {
                 self.locationArr = JSON.parse(res.target.responseText).locations;
                 const locations = self.locationArr;
 
-                locations.forEach(function(location) {
+                locations.forEach(function(location, id) {
+                    let index = id + 1;
                     let marked = {
                         lat: parseFloat(parseFloat(location.latitude).toFixed(6)),
                         lng: parseFloat(parseFloat(location.longitude).toFixed(6)),
@@ -82,6 +83,9 @@ var app = {
                         map: self.map,
                         title: location.name
                     });
+                    //list display code
+                    let listobj = document.getElementById("list-location");
+                    listobj.innerHTML += '<li class="list-group-item"> ' + index + ')\t' + location.name + ' </li>';
                 });
             }
         };
